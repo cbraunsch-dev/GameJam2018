@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJam2018", "Assembly-CSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJam2018", "Assembly-CSharp-Editor-firstpass.csproj", "{2D53D4EC-D118-56F0-5D30-28D26120EAD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameJam2018", "Assembly-CSharp-Editor.csproj", "{FDAC8B16-BAE9-A291-D1FD-F026434F49A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{2D53D4EC-D118-56F0-5D30-28D26120EAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D53D4EC-D118-56F0-5D30-28D26120EAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D53D4EC-D118-56F0-5D30-28D26120EAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAC8B16-BAE9-A291-D1FD-F026434F49A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAC8B16-BAE9-A291-D1FD-F026434F49A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAC8B16-BAE9-A291-D1FD-F026434F49A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAC8B16-BAE9-A291-D1FD-F026434F49A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
