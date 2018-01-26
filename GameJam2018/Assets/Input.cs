@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XboxCtrlrInput;
 
 public class Input : MonoBehaviour {
 	private Rigidbody2D rb;
 	public int movementForce = 300;
+	public int groundHorizontalAcceleration = 50;
+	public int maxRunSpeed = 10;
+	public int maxWalkSpeed = 5;
+	public int maxJogSpeed = 8;
 
 	// Use this for initialization
 	void Start () {
@@ -14,11 +17,17 @@ public class Input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rb.AddForce (Vector2.left * this.movementForce);
-
-		var buttonDown = XCI.GetButtonDown (XboxButton.A);
-		if (buttonDown) {
-			Debug.Log ("Button pressed: " + buttonDown);
+		var controls = gameObject.GetComponent<Player_ControllerAdapter> ();
+		float groundMovement = controls.HorizontalMovement;
+		var acceleration = groundHorizontalAcceleration;
+		Vector3 horizontalForce = new Vector3 (groundMovement * acceleration, 0.0f, 0);
+		var leftAnalogAbsValue = Mathf.Abs (groundMovement);
+		var maxGroundSpeed = maxRunSpeed;
+		if (leftAnalogAbsValue < 0.5) {
+			maxGroundSpeed = maxWalkSpeed;
+		}  else if (leftAnalogAbsValue < 0.75) {
+			maxGroundSpeed = maxJogSpeed;
 		}
+		MovementHelper.limitHorizontalVelocityToMaximum (gameObject.GetComponent<Rigidbody>(), maxGroundSpeed, horizontalForce);
 	}
 }

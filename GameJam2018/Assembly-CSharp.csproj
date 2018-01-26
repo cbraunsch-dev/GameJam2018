@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Input.cs" />
+     <Compile Include="Assets\Scripts\Controls\Controls_Xbox.cs" />
+     <Compile Include="Assets\Scripts\Controls\Player_ControllerAdapter.cs" />
+     <Compile Include="Assets\Scripts\MovePlayer.cs" />
+     <Compile Include="Assets\Scripts\MovementHelper.cs" />
      <Compile Include="Assets\XboxCtrlrInputExample\MoveLaser.cs" />
-     <Compile Include="Assets\XboxCtrlrInputExample\MovePlayer.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
