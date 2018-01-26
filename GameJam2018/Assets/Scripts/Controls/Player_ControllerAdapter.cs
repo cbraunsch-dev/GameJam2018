@@ -16,6 +16,12 @@ public class Player_ControllerAdapter : MonoBehaviour {
 		}
 	}
 
+	public float VerticalMovement {
+		get {
+			return this.controls.LeftAnalogVertical;
+		}
+	}
+
 	public bool DidPressJumpButton {
 		get {
 			return this.controls.DidPressButton_A;

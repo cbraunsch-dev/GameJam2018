@@ -15,9 +15,10 @@ public class Input : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		var controls = gameObject.GetComponent<Player_ControllerAdapter> ();
-		float groundMovement = controls.HorizontalMovement;
+		float horizontalMovementVector = controls.HorizontalMovement;
+		float verticalMovementVector = controls.VerticalMovement;
 		var acceleration = groundHorizontalAcceleration;
-		Vector2 horizontalForce = new Vector2 (groundMovement * acceleration, 0.0f);
+		Vector2 horizontalForce = new Vector2 (horizontalMovementVector * acceleration, verticalMovementVector * acceleration);
 
 		rb.velocity = horizontalForce;
 	}
