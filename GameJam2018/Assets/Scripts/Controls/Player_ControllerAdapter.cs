@@ -22,6 +22,18 @@ public class Player_ControllerAdapter : MonoBehaviour {
 		}
 	}
 
+	public float HorizontalAim {
+		get {
+			return this.controls.RightAnalogHorizontal;
+		}
+	}
+
+	public float VerticalAim {
+		get {
+			return this.controls.RightAnalogVertical;
+		}
+	}
+
 	public bool DidPressFireButton {
 		get {
 			return this.controls.DidPressButton_A;

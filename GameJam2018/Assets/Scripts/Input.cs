@@ -8,6 +8,7 @@ public class Input : MonoBehaviour {
 	public int movementForce = 300;
 	public int groundHorizontalAcceleration = 10;
 	public GameObject projectile;
+	public int firingStrength = 25;
 
 	// Use this for initialization
 	void Start () {
@@ -28,13 +29,22 @@ public class Input : MonoBehaviour {
 	void Update () {
 		UpdateMovement ();
 
-		if (controls.DidPressFireButton) {
-			Debug.Log ("Fire ze missiles");
+		if (controls.HorizontalAim != 0 || controls.VerticalAim != 0) {
 			var newProjectile = Instantiate (projectile);
-			Physics2D.IgnoreCollision (newProjectile.GetComponent<Collider2D> (), this.GetComponent<Collider2D> ());
+			Physics2D.IgnoreCollision (newProjectile.GetComponent<Collider2D> (), this.GetComponent<Collider2D> (), true);
 			newProjectile.transform.position = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);
 
-			var projectileForce = Vector2.right * 50;
+			var horizontal = controls.HorizontalAim;
+			var vertical = controls.VerticalAim;
+			var angleRadians = Mathf.Atan (vertical / horizontal);
+			var angleDegrees = Mathf.Rad2Deg * angleRadians;
+			if (horizontal < 0) {
+				angleDegrees += 180;
+			}
+
+			var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
+
+			Debug.Log ("Projectile Force: " + projectileForce);
 			newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
 		}
 	}

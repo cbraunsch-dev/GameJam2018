@@ -19,8 +19,4 @@ public class Projectile_CleanUp : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
-
-	void OnCollisionEnter(Collision2D collision) {
-		Destroy (gameObject);
-	}
 }
