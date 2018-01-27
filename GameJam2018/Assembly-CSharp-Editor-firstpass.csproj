@@ -47,7 +47,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -104,6 +115,9 @@
  </Reference>
  <Reference Include="XInputDotNetPure">
  <HintPath>/Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Assets/Plugins/XInputDotNetPure.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>/Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
