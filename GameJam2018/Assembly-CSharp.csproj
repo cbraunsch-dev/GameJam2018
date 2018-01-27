@@ -154,6 +154,8 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\Scripts\Attacker_Input.cs" />
+     <Compile Include="Assets\Scripts\Cat_Input.cs" />
      <Compile Include="Assets\Scripts\Charger_Input.cs" />
      <Compile Include="Assets\Scripts\ChargingProjectile_Input.cs" />
      <Compile Include="Assets\Scripts\Controls\Controls_Xbox.cs" />

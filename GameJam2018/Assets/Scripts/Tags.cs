@@ -7,4 +7,5 @@ public class Tags : MonoBehaviour {
 	public const string Charger = "Charger";
 	public const string ChargingProjectile = "ChargingProjectile";
 	public const string Attacker = "Attacker";
+	public const string AttackingParticle = "AttackingParticle";
 }

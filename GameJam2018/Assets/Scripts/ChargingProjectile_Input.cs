@@ -12,10 +12,5 @@ public class ChargingProjectile_Input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var attacker = GameObject.FindWithTag (Tags.Attacker);
-		if (this.GetComponent<BoxCollider2D> ().bounds.Intersects (attacker.GetComponent<CircleCollider2D> ().bounds)) {
-			attacker.GetComponent<Energy_Input> ().AddEnergy (this.energy);
-			Destroy (gameObject);
-		}
 	}
 }
