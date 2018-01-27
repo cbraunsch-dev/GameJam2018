@@ -9,10 +9,9 @@ public class Player_Input : MonoBehaviour {
 	private float timeSinceLastFire;
 	private bool isFiring = false;
 	private float rateOfFire = 0.1f;
-	public int movementForce = 300;
 	public int groundHorizontalAcceleration = 10;
 	public GameObject projectile;
-	public int firingStrength = 15;
+	public int firingStrength = 8;
 
 	// Use this for initialization
 	void Start () {
