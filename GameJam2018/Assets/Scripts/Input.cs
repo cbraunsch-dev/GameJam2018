@@ -43,8 +43,6 @@ public class Input : MonoBehaviour {
 			}
 
 			var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
-
-			Debug.Log ("Projectile Force: " + projectileForce);
 			newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
 		}
 	}
