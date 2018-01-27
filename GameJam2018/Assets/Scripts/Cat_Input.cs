@@ -18,12 +18,12 @@ public class Cat_Input : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		Debug.Log ("Collided with kitty");
 		if (collider.tag == Tags.AttackingParticle) {
 			var particleEnergy = collider.gameObject.GetComponent<Projectile_Input> ().energy;
 			this.health -= particleEnergy;
 			if (this.health <= 0) {
-				Destroy (gameObject);
+				var gameManager = GameObject.FindWithTag (Tags.GameManager);
+				gameManager.GetComponent<GameManager_Input> ().DestroyCat (gameObject);
 			}
 		}
 	}

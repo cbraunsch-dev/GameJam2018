@@ -4,7 +4,7 @@ using UnityEngine;
 using Pathfinding;
 
 public class GameManager_Input : MonoBehaviour {
-	public int numberOfCatsAliveAtATime = 3;
+	public int numberOfCatsAliveAtATime = 5;
 	public float delayBeforeSpawningNewCat = 3f;	//In seconds
 	public GameObject whiteCat;
 	public GameObject tigerCat;
@@ -46,5 +46,10 @@ public class GameManager_Input : MonoBehaviour {
 			return Instantiate(whiteCat);
 		}*/
 
+	}
+
+	public void DestroyCat(GameObject cat){
+		this.cats.Remove (cat);
+		Destroy (cat);
 	}
 }

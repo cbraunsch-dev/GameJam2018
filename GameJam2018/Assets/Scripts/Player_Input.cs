@@ -93,12 +93,10 @@ public class Player_Input : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		Debug.Log ("Collision enter");
 		CheckCollisionWithCat (collision);
 	}
 
 	void OnCollisionStay2D(Collision2D collision) {
-		Debug.Log ("Collision stay");
 		CheckCollisionWithCat (collision);
 	}
 }
