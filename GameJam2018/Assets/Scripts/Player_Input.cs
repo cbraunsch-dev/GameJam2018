@@ -5,6 +5,10 @@ using UnityEngine;
 public class Player_Input : MonoBehaviour {
 	private Rigidbody2D rb;
 	private Player_ControllerAdapter controls;
+	private bool allowedToSpawnProjectile;
+	private float timeSinceLastFire;
+	private bool isFiring = false;
+	private float rateOfFire = 0.2f;
 	public int movementForce = 300;
 	public int groundHorizontalAcceleration = 10;
 	public GameObject projectile;
@@ -14,6 +18,8 @@ public class Player_Input : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		controls = gameObject.GetComponent<Player_ControllerAdapter> ();
+		allowedToSpawnProjectile = true;
+		timeSinceLastFire = rateOfFire;
 	}
 
 	void UpdateMovement ()
@@ -28,7 +34,7 @@ public class Player_Input : MonoBehaviour {
 	void Fire ()
 	{
 		var energy = GetComponent<Energy_Input> ();
-		if (controls.HorizontalAim != 0 || controls.VerticalAim != 0 ) {
+		if (allowedToSpawnProjectile && (controls.HorizontalAim != 0 || controls.VerticalAim != 0)) {
 			var newProjectile = Instantiate (projectile);
 			var newProjectileEnergy = newProjectile.GetComponent<Projectile_Input> ().energy;
 			if (energy.Energy >= newProjectileEnergy) {
@@ -45,9 +51,26 @@ public class Player_Input : MonoBehaviour {
 				newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
 			
 				energy.UseEnergy (newProjectileEnergy);
+
+				timeSinceLastFire = 0;
+				allowedToSpawnProjectile = false;
+				isFiring = true;
 			} else {
 				Destroy (newProjectile);
 			}
+		}
+	}
+
+	void UpdateContinuousFireState ()
+	{
+		if (isFiring) {
+			timeSinceLastFire += Time.deltaTime;
+			if (timeSinceLastFire >= rateOfFire) {
+				allowedToSpawnProjectile = true;
+			}
+		}
+		else {
+			allowedToSpawnProjectile = true;
 		}
 	}
 	
@@ -55,5 +78,6 @@ public class Player_Input : MonoBehaviour {
 	void Update () {
 		UpdateMovement ();
 		Fire ();
+		UpdateContinuousFireState ();
 	}
 }

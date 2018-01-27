@@ -15,7 +15,7 @@ public class Energy_Input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Energy: " + this.Energy);
+		
 	}
 
 	public void AddEnergy(int energy) {
