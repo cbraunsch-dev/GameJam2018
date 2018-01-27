@@ -6,6 +6,7 @@ public class GameManager_Input : MonoBehaviour {
 	public int numberOfCatsAliveAtATime = 3;
 	public float delayBeforeSpawningNewCat = 3f;	//In seconds
 	public GameObject whiteCat;
+	public GameObject tigerCat;
 	public List<GameObject> spawnPoints = new List<GameObject>();
 	private List<GameObject> cats = new List<GameObject>();
 	private float timeUntilSpawnNewCat;
@@ -21,7 +22,7 @@ public class GameManager_Input : MonoBehaviour {
 			timeUntilSpawnNewCat -= Time.deltaTime;
 			if (timeUntilSpawnNewCat <= 0) {
 				//Spawn new cat
-				var newCat = Instantiate (whiteCat);
+				var newCat = this.SpawnCat();
 				var indexOfRandomSpawnPoint = Random.Range(0, spawnPoints.Count);
 				var spawnPoint = spawnPoints [indexOfRandomSpawnPoint];
 				newCat.transform.position = spawnPoint.transform.position;
@@ -31,5 +32,10 @@ public class GameManager_Input : MonoBehaviour {
 		} else {
 			timeUntilSpawnNewCat = delayBeforeSpawningNewCat;
 		}
+	}
+
+	private GameObject SpawnCat() {
+		var randomNr = Random.Range(0, 10);
+		return randomNr >= 5 ? Instantiate (whiteCat) : Instantiate (tigerCat);
 	}
 }
