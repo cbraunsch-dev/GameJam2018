@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Input : MonoBehaviour {
+public class Player_Input : MonoBehaviour {
 	private Rigidbody2D rb;
 	private Player_ControllerAdapter controls;
 	public int movementForce = 300;
@@ -24,16 +24,13 @@ public class Input : MonoBehaviour {
 		Vector2 horizontalForce = new Vector2 (horizontalMovementVector * acceleration, verticalMovementVector * acceleration);
 		rb.velocity = horizontalForce;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		UpdateMovement ();
 
+	void Fire ()
+	{
 		if (controls.HorizontalAim != 0 || controls.VerticalAim != 0) {
 			var newProjectile = Instantiate (projectile);
 			Physics2D.IgnoreCollision (newProjectile.GetComponent<Collider2D> (), this.GetComponent<Collider2D> (), true);
 			newProjectile.transform.position = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);
-
 			var horizontal = controls.HorizontalAim;
 			var vertical = controls.VerticalAim;
 			var angleRadians = Mathf.Atan (vertical / horizontal);
@@ -41,9 +38,14 @@ public class Input : MonoBehaviour {
 			if (horizontal < 0) {
 				angleDegrees += 180;
 			}
-
 			var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
 			newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
 		}
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		UpdateMovement ();
+		Fire ();
 	}
 }

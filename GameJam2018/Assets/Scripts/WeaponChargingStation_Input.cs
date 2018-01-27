@@ -16,13 +16,15 @@ public class WeaponChargingStation_Input : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.tag == Tags.Charger) {
-			Debug.Log ("Start charging");
+			var charger = collider.gameObject.GetComponent<Charger_Input> ();
+			charger.StartCharging ();
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider) {
 		if (collider.tag == Tags.Charger) {
-			Debug.Log ("Stop charging");
+			var charger = collider.gameObject.GetComponent<Charger_Input> ();
+			charger.StopCharging ();
 		}
 	}
 }

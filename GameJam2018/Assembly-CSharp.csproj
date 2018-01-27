@@ -46,9 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Charger_Input.cs" />
      <Compile Include="Assets\Scripts\Controls\Controls_Xbox.cs" />
      <Compile Include="Assets\Scripts\Controls\Player_ControllerAdapter.cs" />
-     <Compile Include="Assets\Scripts\Input.cs" />
+     <Compile Include="Assets\Scripts\Energy_Input.cs" />
+     <Compile Include="Assets\Scripts\Player_Input.cs" />
      <Compile Include="Assets\Scripts\Projectile_CleanUp.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
      <Compile Include="Assets\Scripts\WeaponChargingStation_Input.cs" />
