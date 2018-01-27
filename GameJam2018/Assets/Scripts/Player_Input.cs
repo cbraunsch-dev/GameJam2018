@@ -27,19 +27,27 @@ public class Player_Input : MonoBehaviour {
 
 	void Fire ()
 	{
-		if (controls.HorizontalAim != 0 || controls.VerticalAim != 0) {
+		var energy = GetComponent<Energy_Input> ();
+		if (controls.HorizontalAim != 0 || controls.VerticalAim != 0 ) {
 			var newProjectile = Instantiate (projectile);
-			Physics2D.IgnoreCollision (newProjectile.GetComponent<Collider2D> (), this.GetComponent<Collider2D> (), true);
-			newProjectile.transform.position = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);
-			var horizontal = controls.HorizontalAim;
-			var vertical = controls.VerticalAim;
-			var angleRadians = Mathf.Atan (vertical / horizontal);
-			var angleDegrees = Mathf.Rad2Deg * angleRadians;
-			if (horizontal < 0) {
-				angleDegrees += 180;
+			var newProjectileEnergy = newProjectile.GetComponent<Projectile_Input> ().energy;
+			if (energy.Energy >= newProjectileEnergy) {
+				Physics2D.IgnoreCollision (newProjectile.GetComponent<Collider2D> (), this.GetComponent<Collider2D> (), true);
+				newProjectile.transform.position = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);
+				var horizontal = controls.HorizontalAim;
+				var vertical = controls.VerticalAim;
+				var angleRadians = Mathf.Atan (vertical / horizontal);
+				var angleDegrees = Mathf.Rad2Deg * angleRadians;
+				if (horizontal < 0) {
+					angleDegrees += 180;
+				}
+				var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
+				newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
+			
+				energy.UseEnergy (newProjectileEnergy);
+			} else {
+				Destroy (newProjectile);
 			}
-			var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
-			newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
 		}
 	}
 	
