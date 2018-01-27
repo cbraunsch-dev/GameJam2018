@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Controls\Controls_Xbox.cs" />
      <Compile Include="Assets\Scripts\Controls\Player_ControllerAdapter.cs" />
      <Compile Include="Assets\Scripts\Input.cs" />
+     <Compile Include="Assets\Scripts\Projectile_CleanUp.cs" />
      <Compile Include="Assets\XboxCtrlrInputExample\MoveLaser.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.Analytics">
