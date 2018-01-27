@@ -39,7 +39,6 @@ public class GameManager_Input : MonoBehaviour {
 		var randomNr = Random.Range(0, 10);
 		//if (randomNr >= 5) {
 			var cat = Instantiate (tigerCat);
-			cat.GetComponent<AIDestinationSetter> ().target = GameObject.FindWithTag (Tags.Charger).transform;
 			return cat;
 		/*} else {
 			return Instantiate(whiteCat);
