@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChargingProjectile_Input : MonoBehaviour {
+	private int energy = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +14,7 @@ public class ChargingProjectile_Input : MonoBehaviour {
 	void Update () {
 		var attacker = GameObject.FindWithTag (Tags.Attacker);
 		if (this.GetComponent<BoxCollider2D> ().bounds.Intersects (attacker.GetComponent<CircleCollider2D> ().bounds)) {
-			Debug.Log ("Collided with attacker!");
+			attacker.GetComponent<Energy_Input> ().AddEnergy (this.energy);
 		}
 	}
 }
