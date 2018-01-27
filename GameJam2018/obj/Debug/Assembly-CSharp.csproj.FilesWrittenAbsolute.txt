@@ -47,3 +47,4 @@
 /Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Temp/bin/Debug/Pathfinding.Ionic.Zip.Reduced.dll

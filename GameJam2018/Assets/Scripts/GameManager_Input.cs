@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class GameManager_Input : MonoBehaviour {
 	public int numberOfCatsAliveAtATime = 3;
@@ -36,6 +37,14 @@ public class GameManager_Input : MonoBehaviour {
 
 	private GameObject SpawnCat() {
 		var randomNr = Random.Range(0, 10);
-		return randomNr >= 5 ? Instantiate (whiteCat) : Instantiate (tigerCat);
+		//return randomNr >= 5 ? Instantiate (whiteCat) : Instantiate (tigerCat);
+		//if (randomNr >= 5) {
+			var cat = Instantiate (tigerCat);
+		cat.GetComponent<AIDestinationSetter> ().target = GameObject.FindWithTag (Tags.Charger).transform;
+			return cat;
+		/*} else {
+			return Instantiate(whiteCat);
+		}*/
+
 	}
 }
