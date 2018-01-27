@@ -8,11 +8,11 @@ public class Player_Input : MonoBehaviour {
 	private bool allowedToSpawnProjectile;
 	private float timeSinceLastFire;
 	private bool isFiring = false;
-	private float rateOfFire = 0.2f;
+	private float rateOfFire = 0.1f;
 	public int movementForce = 300;
 	public int groundHorizontalAcceleration = 10;
 	public GameObject projectile;
-	public int firingStrength = 25;
+	public int firingStrength = 15;
 
 	// Use this for initialization
 	void Start () {
