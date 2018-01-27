@@ -164,6 +164,7 @@
      <Compile Include="Assets\Scripts\Projectile_CleanUp.cs" />
      <Compile Include="Assets\Scripts\Projectile_Input.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
+     <Compile Include="Assets\Scripts\TigerCat_Input.cs" />
      <Compile Include="Assets\Scripts\WeaponChargingStation_Input.cs" />
      <Compile Include="Assets\XboxCtrlrInputExample\MoveLaser.cs" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
