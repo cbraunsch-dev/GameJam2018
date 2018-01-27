@@ -11,6 +11,7 @@ public class Player_Input : MonoBehaviour {
 	private float rateOfFire = 0.1f;
 	private int groundHorizontalAcceleration = 5;
 	private int firingStrength = 8;
+	private float health = 20;
 	public GameObject projectile;
 
 	// Use this for initialization
@@ -78,5 +79,26 @@ public class Player_Input : MonoBehaviour {
 		UpdateMovement ();
 		Fire ();
 		UpdateContinuousFireState ();
+	}
+
+	void CheckCollisionWithCat (Collision2D collision)
+	{
+		if (collision.collider.tag == Tags.Cat) {
+			var damageByCat = collision.collider.gameObject.GetComponent<Cat_Input> ().Damage;
+			this.health -= damageByCat;
+			if (this.health <= 0) {
+				Destroy (gameObject);
+			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		Debug.Log ("Collision enter");
+		CheckCollisionWithCat (collision);
+	}
+
+	void OnCollisionStay2D(Collision2D collision) {
+		Debug.Log ("Collision stay");
+		CheckCollisionWithCat (collision);
 	}
 }

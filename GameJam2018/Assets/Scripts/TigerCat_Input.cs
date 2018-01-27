@@ -17,12 +17,14 @@ public class TigerCat_Input : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var distanceToAttacker = Vector2.Distance (attacker.transform.position, this.transform.position);
-		var distanceToCharger = Vector2.Distance (charger.transform.position, this.transform.position);
-		if (distanceToAttacker < distanceToCharger) {
-			destinationSetter.target = attacker.transform;
-		} else {
-			destinationSetter.target = charger.transform;
+		if (attacker != null && charger != null) {
+			var distanceToAttacker = Vector2.Distance (attacker.transform.position, this.transform.position);
+			var distanceToCharger = Vector2.Distance (charger.transform.position, this.transform.position);
+			if (distanceToAttacker < distanceToCharger) {
+				destinationSetter.target = attacker.transform;
+			} else {
+				destinationSetter.target = charger.transform;
+			}	
 		}
 	}
 }
