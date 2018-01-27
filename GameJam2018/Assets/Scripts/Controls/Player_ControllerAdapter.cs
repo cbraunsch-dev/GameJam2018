@@ -22,21 +22,9 @@ public class Player_ControllerAdapter : MonoBehaviour {
 		}
 	}
 
-	public bool DidPressJumpButton {
+	public bool DidPressFireButton {
 		get {
 			return this.controls.DidPressButton_A;
-		}
-	}
-
-	public bool DidPressConsumeButton {
-		get {
-			return this.controls.DidPressButton_B;
-		}
-	}
-
-	public bool DidReleaseConsumeButton {
-		get {
-			return this.controls.DidReleaseButton_B;
 		}
 	}
 }

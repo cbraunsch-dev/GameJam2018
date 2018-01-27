@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Input : MonoBehaviour {
 	private Rigidbody2D rb;
+	private Player_ControllerAdapter controls;
 	public int movementForce = 300;
 	public int groundHorizontalAcceleration = 10;
-	public GameObject partner;
-	public string name;
+	public GameObject projectile;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		controls = gameObject.GetComponent<Player_ControllerAdapter> ();
 	}
 
 	void UpdateMovement ()
 	{
-		var controls = gameObject.GetComponent<Player_ControllerAdapter> ();
 		float horizontalMovementVector = controls.HorizontalMovement;
 		float verticalMovementVector = controls.VerticalMovement;
 		var acceleration = groundHorizontalAcceleration;
@@ -28,10 +28,14 @@ public class Input : MonoBehaviour {
 	void Update () {
 		UpdateMovement ();
 
-		RaycastHit2D hit;
-		var rayDirection = transform.position - partner.transform.position;
-		var rayHit = Physics2D.Raycast (partner.transform.position, rayDirection);
-		Debug.Log (name + " at " + transform.position + " has hit partner at: " + rayHit.transform.position);
-		//Debug.Log("Ray dir: " + rayDirection);
+		if (controls.DidPressFireButton) {
+			Debug.Log ("Fire ze missiles");
+			var newProjectile = Instantiate (projectile);
+			Physics2D.IgnoreCollision (newProjectile.GetComponent<Collider2D> (), this.GetComponent<Collider2D> ());
+			newProjectile.transform.position = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);
+
+			var projectileForce = Vector2.right * 50;
+			newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
+		}
 	}
 }
