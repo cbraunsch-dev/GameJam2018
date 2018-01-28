@@ -169,7 +169,7 @@
      <Compile Include="Assets\Scripts\TigerCat_Input.cs" />
      <Compile Include="Assets\Scripts\Triggers.cs" />
      <Compile Include="Assets\Scripts\WeaponChargingStation_Input.cs" />
-     <Compile Include="Assets\WhiteCat_Input.cs" />
+     <Compile Include="Assets\Scripts\WhiteCat_Input.cs" />
      <Compile Include="Assets\XboxCtrlrInputExample\MoveLaser.cs" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
