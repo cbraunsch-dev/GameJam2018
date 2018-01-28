@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Input : MonoBehaviour {
 	private Rigidbody2D rb;
@@ -12,7 +13,12 @@ public class Player_Input : MonoBehaviour {
 	private int groundHorizontalAcceleration = 5;
 	private int firingStrength = 8;
 	private float health = 20;
+	private float flashSpeed = 5f;
+	private Color flashColor = new Color (1f, 0f, 0f, 0.25f);
+	private bool damaged = false;
 	public GameObject projectile;
+	public Slider healthSlider;
+	public Image damageImage;
 
 	// Use this for initialization
 	void Start () {
@@ -79,6 +85,13 @@ public class Player_Input : MonoBehaviour {
 		UpdateMovement ();
 		Fire ();
 		UpdateContinuousFireState ();
+
+		if (damaged) {
+			damageImage.color = flashColor;
+		} else {
+			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+		}
+		damaged = false; 
 	}
 
 	void CheckCollisionWithCat (Collision2D collision)
@@ -86,6 +99,8 @@ public class Player_Input : MonoBehaviour {
 		if (collision.collider.tag == Tags.Cat) {
 			var damageByCat = collision.collider.gameObject.GetComponent<Cat_Input> ().Damage;
 			this.health -= damageByCat;
+			this.healthSlider.value = this.health;
+			this.damaged = true;
 			if (this.health <= 0) {
 				Destroy (gameObject);
 			}

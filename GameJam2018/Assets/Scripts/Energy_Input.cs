@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Energy_Input : MonoBehaviour {
+	private int maxEnergy = 20;
+	public Slider energySlider;
+
 	public int Energy {
 		get;
 		private set;
@@ -10,7 +14,7 @@ public class Energy_Input : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.Energy = 10;
+		this.Energy = this.maxEnergy;
 	}
 	
 	// Update is called once per frame
@@ -20,11 +24,15 @@ public class Energy_Input : MonoBehaviour {
 
 	public void AddEnergy(int energy) {
 		this.Energy += energy;
-		Debug.Log (">>Add energy " + energy + ". Total: " + this.Energy);
+		if (this.Energy > this.maxEnergy) {
+			this.Energy = this.maxEnergy;
+		}
+		this.energySlider.value = this.Energy;
 	}
 
 	public void UseEnergy(int energy) {
 		this.Energy -= energy;
+		this.energySlider.value = this.Energy;
 		if (this.Energy < 0) {
 			this.Energy = 0;
 		}

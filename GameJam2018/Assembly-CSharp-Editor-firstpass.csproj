@@ -113,11 +113,11 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="XInputDotNetPure">
- <HintPath>/Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Assets/Plugins/XInputDotNetPure.dll</HintPath>
- </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>/Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="XInputDotNetPure">
+ <HintPath>/Users/chrisbraunschweiler1/Documents/Development/Game_Development/GameJam2018/Git/GameJam2018/Assets/Plugins/XInputDotNetPure.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
