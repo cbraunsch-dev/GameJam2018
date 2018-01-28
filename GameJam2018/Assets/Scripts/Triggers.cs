@@ -9,4 +9,5 @@ public class Triggers : MonoBehaviour {
 	public const string StopCharging = "StopCharging";
 	public const string StartShocking = "StartShocking";
 	public const string Die = "Die";
+	public const string BeamCollide = "BeamCollide";
 }
