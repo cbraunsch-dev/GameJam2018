@@ -16,6 +16,7 @@ public class Player_Input : MonoBehaviour {
 	private float flashSpeed = 5f;
 	private Color flashColor = new Color (1f, 0f, 0f, 0.25f);
 	private bool damaged = false;
+	private AudioSource audioSource;
 	public GameObject projectile;
 	public Slider healthSlider;
 	public Image damageImage;
@@ -26,6 +27,7 @@ public class Player_Input : MonoBehaviour {
 		controls = gameObject.GetComponent<Player_ControllerAdapter> ();
 		allowedToSpawnProjectile = true;
 		timeSinceLastFire = rateOfFire;
+		audioSource = GetComponent<AudioSource> ();
 	}
 
 	void UpdateMovement ()
@@ -63,6 +65,7 @@ public class Player_Input : MonoBehaviour {
 				timeSinceLastFire = 0;
 				allowedToSpawnProjectile = false;
 				isFiring = true;
+				audioSource.Play ();
 			} else {
 				Destroy (newProjectile);
 			}
