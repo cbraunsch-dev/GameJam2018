@@ -164,6 +164,7 @@
      <Compile Include="Assets\Scripts\Energy_Input.cs" />
      <Compile Include="Assets\Scripts\GameManager_Input.cs" />
      <Compile Include="Assets\Scripts\GameOver_UI_Handler_Input.cs" />
+     <Compile Include="Assets\Scripts\Info_UI_Handler_Input.cs" />
      <Compile Include="Assets\Scripts\Player_Input.cs" />
      <Compile Include="Assets\Scripts\Projectile_CleanUp.cs" />
      <Compile Include="Assets\Scripts\Projectile_Input.cs" />

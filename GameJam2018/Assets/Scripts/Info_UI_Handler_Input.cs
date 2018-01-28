@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UI_Handler_Input : MonoBehaviour {
-
+public class Info_UI_Handler_Input : MonoBehaviour {
 	public void StartGame() 
 	{
-		SceneManager.LoadScene("Info");
+		SceneManager.LoadScene("Level1");
 	}
 }
