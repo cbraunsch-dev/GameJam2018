@@ -19,12 +19,18 @@ public class GameManager_Input : MonoBehaviour {
 	private bool catsAround = false;
 	private float timeSinceLastCatSound = 0;
 	private float timeBetweenCatSounds = 4;
+	private float timeSinceLastCatStrengthening = 0;
+	private float timeBetweenCatStrengthenings = 10;
+	private const int initialCathStrength = 5;
+	private const int catStrenghtIncrease = 3;
+	private int catStrenght;
 
 	// Use this for initialization
 	void Start () {
 		timeUntilSpawnNewCat = delayBeforeSpawningNewCat;
 		this.UpdateKillCountText ();
 		catAudioSource = GetComponent<AudioSource> ();
+		catStrenght = initialCathStrength;
 	}
 	
 	// Update is called once per frame
@@ -43,6 +49,16 @@ public class GameManager_Input : MonoBehaviour {
 			}
 		} else {
 			timeUntilSpawnNewCat = delayBeforeSpawningNewCat;
+		}
+
+		IncreaseCatStrenght ();
+	}
+
+	private void IncreaseCatStrenght() {
+		timeSinceLastCatStrengthening += Time.deltaTime;
+		if (timeSinceLastCatStrengthening > timeBetweenCatStrengthenings) {
+			timeSinceLastCatStrengthening = 0;
+			this.catStrenght += catStrenghtIncrease;
 		}
 	}
 
@@ -67,6 +83,7 @@ public class GameManager_Input : MonoBehaviour {
 	private GameObject SpawnCat() {
 		catsAround = true;
 		var cat = Instantiate (tigerCat);
+		cat.GetComponent<Cat_Input> ().StartingHealth = catStrenght;
 		catsAround = true;
 		return cat;
 	}

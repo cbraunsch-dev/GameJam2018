@@ -4,16 +4,18 @@ using UnityEngine;
 using Pathfinding;
 
 public class Cat_Input : MonoBehaviour {
-	private int health = 5;
+	private int health;
 	private AIPath ai;
 	private Animator animator;
 	public float Damage { get; private set; } //The damage the cat inflicts on the Roomba upon contact
+	public int StartingHealth { get; set; }
 
 	// Use this for initialization
 	void Start () {
 		this.Damage = 0.2f;
 		this.ai = GetComponent<AIPath> ();
 		this.animator = GetComponent<Animator> ();
+		this.health = StartingHealth;
 	}
 	
 	// Update is called once per frame
