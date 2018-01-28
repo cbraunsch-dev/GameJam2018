@@ -154,8 +154,8 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
-     <Compile Include="Assets\GameOver_UI_Handler_Input.cs" />
      <Compile Include="Assets\Scripts\Attacker_Input.cs" />
+     <Compile Include="Assets\Scripts\BackgroundMusic_Input.cs" />
      <Compile Include="Assets\Scripts\Cat_Input.cs" />
      <Compile Include="Assets\Scripts\Charger_Input.cs" />
      <Compile Include="Assets\Scripts\ChargingProjectile_Input.cs" />
@@ -163,6 +163,7 @@
      <Compile Include="Assets\Scripts\Controls\Player_ControllerAdapter.cs" />
      <Compile Include="Assets\Scripts\Energy_Input.cs" />
      <Compile Include="Assets\Scripts\GameManager_Input.cs" />
+     <Compile Include="Assets\Scripts\GameOver_UI_Handler_Input.cs" />
      <Compile Include="Assets\Scripts\Player_Input.cs" />
      <Compile Include="Assets\Scripts\Projectile_CleanUp.cs" />
      <Compile Include="Assets\Scripts\Projectile_Input.cs" />
