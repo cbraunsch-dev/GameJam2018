@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6f59b77cf407246339bb3cf7f697b622
-timeCreated: 1517065076
+guid: 4fefdaafbb6ab45fe8235243525f7a53
+timeCreated: 1517140077
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -13,6 +13,11 @@ TextureImporter:
     21300012: TigerCat_6
     21300014: TigerCat_7
     21300016: TigerCat_8
+    21300018: TigerCat_9
+    21300020: TigerCat_10
+    21300022: TigerCat_11
+    21300024: TigerCat_12
+    21300026: TigerCat_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -186,7 +191,72 @@ TextureImporter:
       name: TigerCat_8
       rect:
         serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TigerCat_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TigerCat_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TigerCat_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TigerCat_12
+      rect:
+        serializedVersion: 2
         x: 800
+        y: 0
+        width: 160
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TigerCat_13
+      rect:
+        serializedVersion: 2
+        x: 960
         y: 0
         width: 160
         height: 320

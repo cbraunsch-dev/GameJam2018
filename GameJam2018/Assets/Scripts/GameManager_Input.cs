@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager_Input : MonoBehaviour {
 	private int numberOfCatsAliveAtATime = 5;
 	private float delayBeforeSpawningNewCat = 3f;	//In seconds
-	public GameObject whiteCat;
 	public GameObject tigerCat;
 	public List<GameObject> spawnPoints = new List<GameObject>();
 	private List<GameObject> cats = new List<GameObject>();

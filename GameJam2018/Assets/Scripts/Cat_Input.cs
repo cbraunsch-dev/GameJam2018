@@ -23,6 +23,11 @@ public class Cat_Input : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.tag == Tags.AttackingParticle) {
+			if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("TigerCat_Shock"))
+			{
+				animator.SetTrigger (Triggers.StartShocking);
+			}
+
 			var particleEnergy = collider.gameObject.GetComponent<Projectile_Input> ().energy;
 			this.health -= particleEnergy;
 			if (this.health <= 0) {
