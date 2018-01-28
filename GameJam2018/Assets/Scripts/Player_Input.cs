@@ -103,6 +103,7 @@ public class Player_Input : MonoBehaviour {
 			this.damaged = true;
 			if (this.health <= 0) {
 				Destroy (gameObject);
+				GameManager_Input.PlayerDied ();
 			}
 		}
 	}

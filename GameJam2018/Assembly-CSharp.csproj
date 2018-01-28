@@ -154,6 +154,7 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\GameOver_UI_Handler_Input.cs" />
      <Compile Include="Assets\Scripts\Attacker_Input.cs" />
      <Compile Include="Assets\Scripts\Cat_Input.cs" />
      <Compile Include="Assets\Scripts\Charger_Input.cs" />
@@ -168,9 +169,9 @@
      <Compile Include="Assets\Scripts\Tags.cs" />
      <Compile Include="Assets\Scripts\TigerCat_Input.cs" />
      <Compile Include="Assets\Scripts\Triggers.cs" />
+     <Compile Include="Assets\Scripts\UI_Handler_Input.cs" />
      <Compile Include="Assets\Scripts\WeaponChargingStation_Input.cs" />
      <Compile Include="Assets\Scripts\WhiteCat_Input.cs" />
-     <Compile Include="Assets\UI_Handler_Input.cs" />
      <Compile Include="Assets\XboxCtrlrInputExample\MoveLaser.cs" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />

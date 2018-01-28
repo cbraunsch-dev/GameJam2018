@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.SceneManagement;
 
 public class GameManager_Input : MonoBehaviour {
 	private int numberOfCatsAliveAtATime = 5;
@@ -37,16 +38,16 @@ public class GameManager_Input : MonoBehaviour {
 
 	private GameObject SpawnCat() {
 		var randomNr = Random.Range(0, 10);
-		//if (randomNr >= 5) {
-			var cat = Instantiate (tigerCat);
-			return cat;
-		/*} else {
-			return Instantiate(whiteCat);
-		}*/
+		var cat = Instantiate (tigerCat);
+		return cat;
 	}
 
 	public void DestroyCat(GameObject cat){
 		this.cats.Remove (cat);
 		Destroy (cat);
+	}
+
+	public static void PlayerDied() {
+		SceneManager.LoadScene("GameOver");
 	}
 }
