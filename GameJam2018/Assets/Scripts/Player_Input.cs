@@ -55,6 +55,7 @@ public class Player_Input : MonoBehaviour {
 				}
 				var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
 				newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
+				newProjectile.transform.rotation = Quaternion.AngleAxis (angleDegrees, Vector3.forward);
 			
 				energy.UseEnergy (newProjectileEnergy);
 
@@ -79,19 +80,24 @@ public class Player_Input : MonoBehaviour {
 			allowedToSpawnProjectile = true;
 		}
 	}
+
+	void IndicateDamage ()
+	{
+		if (damaged) {
+			damageImage.color = flashColor;
+		}
+		else {
+			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+		}
+		damaged = false;
+	}
 	
 	// Update is called once per frame
 	void Update () {
 		UpdateMovement ();
 		Fire ();
 		UpdateContinuousFireState ();
-
-		if (damaged) {
-			damageImage.color = flashColor;
-		} else {
-			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-		}
-		damaged = false; 
+		IndicateDamage ();
 	}
 
 	void CheckCollisionWithCat (Collision2D collision)
