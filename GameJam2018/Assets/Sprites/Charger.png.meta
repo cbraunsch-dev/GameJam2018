@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a22ee35428be540908b1fb45d976227b
-timeCreated: 1517053622
+guid: f55519e4a0fee4e5d9797e4a63143a22
+timeCreated: 1517142521
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,12 @@ TextureImporter:
     21300010: Charger_5
     21300012: Charger_6
     21300014: Charger_7
+    21300016: Charger_8
+    21300018: Charger_9
+    21300020: Charger_10
+    21300022: Charger_11
+    21300024: Charger_12
+    21300026: Charger_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -82,7 +88,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
+        y: 480
         width: 160
         height: 160
       alignment: 0
@@ -95,7 +101,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 480
         width: 160
         height: 160
       alignment: 0
@@ -108,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 160
+        y: 480
         width: 160
         height: 160
       alignment: 0
@@ -121,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 160
+        y: 480
         width: 160
         height: 160
       alignment: 0
@@ -134,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 160
+        y: 480
         width: 160
         height: 160
       alignment: 0
@@ -147,7 +153,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 800
-        y: 160
+        y: 480
         width: 160
         height: 160
       alignment: 0
@@ -160,7 +166,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 320
         width: 160
         height: 160
       alignment: 0
@@ -173,7 +179,85 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Charger_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Charger_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Charger_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Charger_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Charger_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Charger_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
         width: 160
         height: 160
       alignment: 0
