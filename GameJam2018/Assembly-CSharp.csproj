@@ -167,6 +167,7 @@
      <Compile Include="Assets\Scripts\Projectile_Input.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
      <Compile Include="Assets\Scripts\TigerCat_Input.cs" />
+     <Compile Include="Assets\Scripts\Triggers.cs" />
      <Compile Include="Assets\Scripts\WeaponChargingStation_Input.cs" />
      <Compile Include="Assets\WhiteCat_Input.cs" />
      <Compile Include="Assets\XboxCtrlrInputExample\MoveLaser.cs" />
