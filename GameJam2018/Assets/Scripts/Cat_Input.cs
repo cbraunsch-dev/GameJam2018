@@ -5,18 +5,20 @@ using Pathfinding;
 
 public class Cat_Input : MonoBehaviour {
 	private int health = 5;
-	private Rigidbody2D rb;
+	private AIPath ai;
+	private Animator animator;
 	public float Damage { get; private set; } //The damage the cat inflicts on the Roomba upon contact
 
 	// Use this for initialization
 	void Start () {
 		this.Damage = 0.2f;
-		this.rb = GetComponent<Rigidbody2D>();
+		this.ai = GetComponent<AIPath> ();
+		this.animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Animator> ().SetFloat ("Speed", GetComponent<AIPath>().velocity.magnitude);
+		GetComponent<Animator> ().SetFloat ("Speed", ai.velocity.magnitude);
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
@@ -27,6 +29,18 @@ public class Cat_Input : MonoBehaviour {
 				var gameManager = GameObject.FindWithTag (Tags.GameManager);
 				gameManager.GetComponent<GameManager_Input> ().DestroyCat (gameObject);
 			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.collider.tag == Tags.Attacker || collision.collider.tag == Tags.Charger) {
+			animator.SetTrigger (Triggers.CatStrike);	
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D collision) {
+		if (collision.collider.tag == Tags.Attacker || collision.collider.tag == Tags.Charger) {
+			animator.SetTrigger (Triggers.CatIdle);
 		}
 	}
 }
