@@ -53,9 +53,10 @@ public class Player_Input : MonoBehaviour {
 				if (horizontal < 0) {
 					angleDegrees += 180;
 				}
-				var projectileForce = Quaternion.AngleAxis (angleDegrees, Vector3.forward) * new Vector3 (firingStrength, 0);
+				var quaternion = Quaternion.AngleAxis (angleDegrees, Vector3.forward);
+				var projectileForce = quaternion * new Vector3 (firingStrength, 0);
 				newProjectile.GetComponent<Rigidbody2D> ().AddForce (projectileForce, ForceMode2D.Impulse);
-				newProjectile.transform.rotation = Quaternion.AngleAxis (angleDegrees, Vector3.forward);
+				newProjectile.transform.rotation = quaternion;
 			
 				energy.UseEnergy (newProjectileEnergy);
 
