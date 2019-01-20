@@ -11,3 +11,4 @@ The players take control of two Roomba-like vacuum robots that are equipped with
 - Charger: The charger must charge himself on the charging station located in the center of the screen. He can then transmit his energy to the defender.
 - Defender: The defender can use the energy he received from the charger to vaporize the cats.
 
+![Screenshot](https://github.com/cbraunsch-dev/3dModelling/raw/master/KittyKillerMurderSpree.gif "Screenshot")
