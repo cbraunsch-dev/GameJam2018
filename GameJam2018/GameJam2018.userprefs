@@ -1,12 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Attacker_Input.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Cat_Input.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player_Input.cs" Line="110" Column="2" />
-      <File FileName="Assets/Scripts/Cat_Input.cs" Line="43" Column="41" />
-      <File FileName="Assets/Scripts/Triggers.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/Triggers.cs" Line="12" Column="50" />
       <File FileName="Assets/Scripts/Charger_Input.cs" Line="39" Column="50" />
-      <File FileName="Assets/Scripts/Attacker_Input.cs" Line="29" Column="46" />
+      <File FileName="Assets/Scripts/Attacker_Input.cs" Line="17" Column="2" />
+      <File FileName="../../../FireFight/Git/firefight/Assets/MyAssets/Scripts/UI/UIManager_Input.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/GameManager_Input.cs" Line="86" Column="62" />
+      <File FileName="Assets/Scripts/Player_Input.cs" Line="68" Column="25" />
+      <File FileName="Assets/Scripts/Cat_Input.cs" Line="18" Column="32" />
+      <File FileName="Assets/Scripts/ChargingProjectile_Input.cs" Line="18" Column="39" />
+      <File FileName="Assets/Scripts/Energy_Input.cs" Line="26" Column="5" />
+      <File FileName="Assets/Scripts/BackgroundMusic_Input.cs" Line="20" Column="23" />
+      <File FileName="Assets/Scripts/GameOver_UI_Handler_Input.cs" Line="9" Column="3" />
+      <File FileName="Assets/Scripts/Info_UI_Handler_Input.cs" Line="4" Column="34" />
+      <File FileName="Assets/Scripts/UI_Handler_Input.cs" Line="10" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +22,7 @@
           <Node name="GameJam2018" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Attacker_Input.cs" selected="True" />
+                <Node name="Cat_Input.cs" selected="True" />
               </Node>
             </Node>
             <Node name="Assembly-CSharp-Editor" expanded="True" />
